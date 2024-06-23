@@ -14,21 +14,20 @@
             <h1>Generador de memes</h1>
             <div class="box_nav_ppal">
                 <div class="box box_img">
-                    <!-- <img src="https://img.icons8.com/material-outlined/24/image-file.png" alt="image-file" /> -->
-                    <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/image-file.png" alt="image-file" />
-                    <button>Imagen</button>
+                    <button>
+                        <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/image-file.png" alt="image-file" />
+                        Imagen</button>
                 </div>
                 <div class="box box_text">
-                    <!-- <img src="https://img.icons8.com/windows/32/printed-ocr.png" alt="printed-ocr" /> -->
-                    <img src="https://img.icons8.com/ios/50/FFFFFF/printed-ocr.png" alt="printed-ocr" />
-                    <button>Text</button>
+                    <button>
+                        <img src="https://img.icons8.com/ios/50/FFFFFF/printed-ocr.png" alt="printed-ocr" />
+                        Text</button>
                 </div>
                 <div class="box box_modo">
-                    <!-- <img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-idea-web-and-seo-tanah-basah-basic-outline-tanah-basah.png"
-                        alt="external-idea-web-and-seo-tanah-basah-basic-outline-tanah-basah" /> -->
-                   
-                    <button class="button_modo"> <img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png"
-                        alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro</button>
+                    <button class="button_modo"> <img
+                            src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png"
+                            alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo
+                        oscuro</button>
                 </div>
             </div>
         </div>
@@ -45,12 +44,59 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- ASIDE -->
+
         <aside class="right_side_container">
             <div>
+                <legend>IMAGEN</legend>
                 <div>
-                    <p>CONTENIDO</p>
+                    <label for="url">URL
+                        <input type="url" name="url" id="link-input">
+                    </label>
+                    <label>FONDO
+                        <input type="color" name="color">
+                    </label>
+                    <select name="select" id="">
+                        <option value="value1">Ninguno</option>
+                        <option value="value2">Aclarar</option>
+                        <option value="value3">Oscurecer</option>
+                        <option value="value4">Diferencia</option>
+                        <option value="value5">Luminosidad</option>
+                        <option value="value6">Multiplicar</option>
+                    </select>
+                    <div>
+                        <label for="range">BRILLO
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">OPACIDAD
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">CONTRASTE
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">DESENFOQUE
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">ESCALA DE GRISES
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">SEPIA
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">HUE
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">SATURADO
+                            <input type="range" name="range" id="#">
+                        </label>
+                        <label for="range">NEGATIVO
+                            <input type="range" name="range" id="#">
+                        </label>
+                    </div>
+                    <button>Restablecer filtros</button>
                 </div>
-            </div>
         </aside>
     </main>
 </body>
