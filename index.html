@@ -21,7 +21,7 @@
                 <div class="box box_text">
                     <button>
                         <img src="https://img.icons8.com/ios/50/FFFFFF/printed-ocr.png" alt="printed-ocr" />
-                        Text</button>
+                        Texto</button>
                 </div>
                 <div class="box box_modo">
                     <button class="button_modo"> <img
@@ -33,34 +33,35 @@
         </div>
     </header>
     <main id="columns-sections">
-        <!-- <section class="box_container_text"> -->
         <div class="all_text_box">
             <div class="text_box text_top">
                 <p>TOP TEXT</p>
             </div>
-            <div class="text_medium"></div>
+            <picture class="img_medium">
+                <img src="" alt="image.png">
+            </picture>
             <div class="text_box text_bottom">
                 <p>BOTTOM TEXT</p>
             </div>
         </div>
-        <div >
-                <button class="button_download">Descargar</button>
-            </div>
-        </section>
+        <div>
+            <button class="button_download">Descargar meme</button>
+        </div>
 
 
         <!-- ASIDE -->
 
-        <!-- <aside class="right_side_container">
-            <div class="right_side_box">
-                <legend>IMAGEN</legend>
+        <aside class="right_side_container">
+            <!-- <section>
+                <div class="right_side_box">
+                    <legend>IMAGEN</legend>
                     <label for="url">URL
-                        <input type="url" name="url" id="link-input">
+                        <input type="url" name="url" class="link-input" id="link-input">
                     </label>
                     <label>FONDO
                         <input type="color" name="color">
                     </label>
-                    <select name="select" id="select_option">
+                    <select name="select" class="select_option" id="select_option">
                         <option value="value1">Ninguno</option>
                         <option value="value2">Aclarar</option>
                         <option value="value3">Oscurecer</option>
@@ -68,39 +69,82 @@
                         <option value="value5">Luminosidad</option>
                         <option value="value6">Multiplicar</option>
                     </select>
-                <div class="box_inputs">
-                    <label for="range">BRILLO
-                        <input type="range" name="range" id="#">
+                    <div class="box_inputs">
+                        <label for="range">BRILLO
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">OPACIDAD
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">CONTRASTE
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">DESENFOQUE
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">ESCALA DE GRISES
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">SEPIA
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">HUE
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">SATURADO
+                            <input type="range" name="range" id="">
+                        </label>
+                        <label for="range">NEGATIVO
+                            <input type="range" name="range" id="">
+                        </label>
+                     <input type="range" id="image-bright" unchecked> Brightness <br />
+                    <div class="brightValue" style="display:none;"> Value:
+                        <input type="range" id="bright-value" value="0" min="0" max="255" step="1" class="span22">
+                    </div> -->
+            <!-- </div>
+                    <button>Restablecer filtros</button>
+                </div>
+            </section> -->
+            <section>
+                <div>
+                    <legend>TEXTO</legend>
+                    <label for="text">SUPERIOR
+                        <textarea name="text" id="text-area" placeholder="TOP TEXT"></textarea>
                     </label>
-                    <label for="range">OPACIDAD
-                        <input type="range" name="range" id="#">
+                    <label for="checkbox">Sin texto superior
+                        <input type="checkbox" name="checkbox" id="">
                     </label>
-                    <label for="range">CONTRASTE
-                        <input type="range" name="range" id="#">
+                    <label for="text">INFERIOR
+                        <textarea name="text" id="text-area" placeholder="TOP TEXT"></textarea>
                     </label>
-                    <label for="range">DESENFOQUE
-                        <input type="range" name="range" id="#">
-                    </label>
-                    <label for="range">ESCALA DE GRISES
-                        <input type="range" name="range" id="#">
-                    </label>
-                    <label for="range">SEPIA
-                        <input type="range" name="range" id="#">
-                    </label>
-                    <label for="range">HUE
-                        <input type="range" name="range" id="#">
-                    </label>
-                    <label for="range">SATURADO
-                        <input type="range" name="range" id="#">
-                    </label>
-                    <label for="range">NEGATIVO
-                        <input type="range" name="range" id="#">
+                    <label for="checkbox">Sin texto inferior
+                        <input type="checkbox" name="checkbox" id="">
                     </label>
                 </div>
-                <button>Restablecer filtros</button>
-            </div>
-        </aside> -->
+                <div>
+                    <label for="">FUENTE</label>
+                    <select name="select" id="" class="select_option">
+                        <option value="">Arial</option>
+                        <option value="">Arial Black</option>
+                        <option value="" selected>American Typewriter</option>
+                        <option value="">Andale Mono</option>
+                        <option value="">Comic Sans MS</option>
+                        <option value="">Helvetica</option>
+                        <option value="">Impact</option>
+                        <option value="">Verdana</option>
+                        <option value="">Times New Roman</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="number">
+                        <input type="number" name="number" id="" max="100">
+                    </label>
+                </div>
+            </section>
+        </aside>
     </main>
+
+
 </body>
 
 </html>

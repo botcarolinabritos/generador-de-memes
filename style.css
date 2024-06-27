@@ -39,6 +39,7 @@
     gap: 20px;
 }
 
+
 .box_nav_ppal{
     display: flex;
     justify-content: space-evenly;
@@ -114,18 +115,22 @@ button:hover {
 }
 
 
-.text_medium {
+.img_medium {
     width: 300px;
-    height: 250px;
+    height: 300px;
     background-color: black;
 }
 
+.img_medium img {
+    width: 100%;
+}
+
 .button_download {
-    background-color: #1C5E21;
+    background-color: #900c3e;
 }
 
 .button_download:hover {
-    background-color: #189a23;
+    background-color: #ad284d;
 }
 
 
@@ -135,7 +140,7 @@ button:hover {
 
 .right_side_container {
     max-width: 500px;
-    height: 90vh;
+    height: 100%;
     display:flex;
     background-color: #252934;
     color: #fafafa;
@@ -145,10 +150,20 @@ button:hover {
 .right_side_box {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
+.right_side_box legend {
+    display: flex;
+    justify-content: center;
+}
 
-#select_option {
+.link-input {
+    width: 150px;
+    height: 25px;
+}
+
+.select_option {
     background-color: #191E2B;
     color: #fafafa;
 }
@@ -159,10 +174,6 @@ button:hover {
     padding: 5px;
 }
 
-.box_inputs label input {
-    appearance: inherit;
-    background-color: #191E2B;
-}
 
 
 
