@@ -37,9 +37,10 @@
             <div class="text_box text_top">
                 <p>TOP TEXT</p>
             </div>
-            <picture class="img_medium">
+            <div class="img_medium"></div>
+            <!-- <picture class="img_medium">
                 <img src="" alt="image.png">
-            </picture>
+            </picture> -->
             <div class="text_box text_bottom">
                 <p>BOTTOM TEXT</p>
             </div>
@@ -51,10 +52,10 @@
 
         <!-- ASIDE -->
 
-        <aside class="right_side_container">
-            <!-- <section>
+        <!-- <aside class="right_side_container">
+            <section>
                 <div class="right_side_box">
-                    <legend>IMAGEN</legend>
+                    <legend class="text_legend">IMAGEN</legend>
                     <label for="url">URL
                         <input type="url" name="url" class="link-input" id="link-input">
                     </label>
@@ -97,17 +98,14 @@
                         <label for="range">NEGATIVO
                             <input type="range" name="range" id="">
                         </label>
-                     <input type="range" id="image-bright" unchecked> Brightness <br />
-                    <div class="brightValue" style="display:none;"> Value:
-                        <input type="range" id="bright-value" value="0" min="0" max="255" step="1" class="span22">
-                    </div> -->
-            <!-- </div>
+                    </div>
+            </div>
                     <button>Restablecer filtros</button>
                 </div>
             </section> -->
-            <section>
-                <div>
-                    <legend>TEXTO</legend>
+            <!-- <section >
+                <div class="right_side_box">
+                    <legend class="text_legend">TEXTO</legend>
                     <label for="text">SUPERIOR
                         <textarea name="text" id="text-area" placeholder="TOP TEXT"></textarea>
                     </label>
@@ -120,9 +118,8 @@
                     <label for="checkbox">Sin texto inferior
                         <input type="checkbox" name="checkbox" id="">
                     </label>
-                </div>
-                <div>
-                    <label for="">FUENTE</label>
+                <div class="box_font">
+                    <legend>FUENTE</legend>
                     <select name="select" id="" class="select_option">
                         <option value="">Arial</option>
                         <option value="">Arial Black</option>
@@ -137,14 +134,50 @@
                 </div>
                 <div>
                     <label for="number">
-                        <input type="number" name="number" id="" max="100">
+                        <input type="number" name="number" id="" min="1" max="100">
                     </label>
+                    <button><img width="24" height="24" src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/align-left.png" alt="align-left"/></button>
+                    <button><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/FFFFFF/align-cell-content-center.png" alt="align-cell-content-center"/></button>
+                    <button><img width="24" height="24" src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/align-right.png" alt="align-right"/></button>
                 </div>
-            </section>
-        </aside>
+                <div class="box_color">
+                    <label for="color">COLOR
+                        <input type="color" name="color" id="">
+                    </label>
+                    <label for="color">FONDO
+                        <input type="color" name="color" id="">
+                    </label>
+                </div> <label for="checkbox">Fondo transparente
+                        <input type="checkbox" name="checkbox" id="">
+                    </label>
+                <div >
+                    <legend for="">CONTORNO</legend>
+                    <button>Ninguno</button>
+                    <button>Claro</button>
+                    <button>Oscuro</button>
+                </div>
+                <div class="box_space_line">
+                    <label for="number">ESPACIADO
+                        <input type="number" name="number" id="" min="10" max="50" >
+                    </label>
+                    <label for="">INTERLINEADO</label>
+                    <select name="select" id="" class="select_option">
+                        <option value="">0.8</option>
+                        <option value="">1</option>
+                        <option value="" selected>1.2</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                    </select>
+                </div>
+            </div>
+            </section> 
+        </aside>-->
     </main>
 
 
+
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -43,6 +43,7 @@
 .box_nav_ppal{
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .box {
@@ -72,22 +73,10 @@ button {
     padding: 10px;
 }
 
+
 button:hover {
     background-color: #303440;
 }
-
-
-
-
-/* .box_container_text {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #303440;
-} */
 
 .all_text_box {
     display: flex;
@@ -136,7 +125,7 @@ button:hover {
 
 
 
-/*    ASIDE    */
+/*    ASIDE  IMG   */
 
 .right_side_container {
     max-width: 500px;
@@ -153,7 +142,11 @@ button:hover {
     gap: 15px;
 }
 
-.right_side_box legend {
+.right_side_box label {
+    display: flex;
+}
+
+.text_legend {
     display: flex;
     justify-content: center;
 }
@@ -173,6 +166,41 @@ button:hover {
     flex-direction: column;
     padding: 5px;
 }
+
+
+/*  ASIDE  TEXT  */
+
+textarea {
+    display: flex;
+}
+
+.box_font {
+    display: flex;
+    flex-direction: column;
+}
+
+.box_color {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.box_space_line {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
