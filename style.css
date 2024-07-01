@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.hidden {
+    display: none;
+}
+
 
 .box_all_container {
     display: flex;
@@ -29,7 +33,7 @@
 
 /*   MAIN */
 
-#columns-sections {
+.columns_sections {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -129,11 +133,30 @@ button:hover {
 
 .right_side_container {
     max-width: 500px;
-    height: 100%;
-    display:flex;
+    display: flex;
+    /* visibility: hidden; */
     background-color: #252934;
     color: #fafafa;
     padding: 20px;
+}
+
+#tab_img , #tab_text{
+    width: 100%;
+    background-color: #252934;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.button_close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button_close img {
+    width: 30px;
 }
 
 .right_side_box {
@@ -193,6 +216,20 @@ textarea {
 }
 
 
+/* MODO CLARO */
+
+.header_background_light {
+    background-color: rgb(146, 150, 150);
+    color: black;
+}
+
+.color_buttons_black {
+    color: black;
+}
+
+.main_background_light {
+    background-color: rgba(225, 230, 230, 0.676);
+}
 
 
 
