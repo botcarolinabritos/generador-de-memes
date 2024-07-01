@@ -1,3 +1,6 @@
+            //PANELES OCULTOS//
+
+
 const tabImg = document.querySelector("#tab_img");
 const tabText = document.querySelector("#tab_text");
 tabImg.classList.add("hidden");
@@ -22,6 +25,10 @@ botonTexto.addEventListener("click", function(){
 //         .toggle("hidden");
 // });
 
+
+            // MODO OSCURO , MODO CLARO //
+
+
 const botonModoOscuro = document.querySelector("#button_dark");
 botonModoOscuro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
@@ -36,6 +43,35 @@ botonModoOscuro.addEventListener("click", function(){
         botonModoOscuro.innerHTML = 'Modo oscuro';
     }
     document.querySelector(".columns_sections").classList.toggle("main_background_light");
-    console.log(document.querySelector(".columns_sections").classList);
+    // tabImg.classList.toggle("main_background_light").toggle("color_buttons_black");
 });
 
+
+            // BOTON DESCARGA //
+
+
+const botonDescarga = document.querySelector(".button_download");
+const contenedorDescarga = document.querySelector(".all_text_box");
+
+function descargarMeme () {
+    domtoimage.toBlob(contenedorDescarga).then(function (blob) {
+        saveAs(blob, 'meme.png')
+    }
+);
+}
+
+botonDescarga.addEventListener("click", descargarMeme);
+
+
+            // URL //
+
+
+const campoUrl = document.getElementById("link_input");
+
+campoUrl.addEventListener("change", function() {
+    let element = document.createElement("meme");
+    element.setAttribute("src", campoUrl.value);
+    element.setAttribute("alt", "image.png");
+    contenedorDescarga.appendChild(element);
+}
+);

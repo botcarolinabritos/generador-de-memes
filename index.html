@@ -5,6 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
 
@@ -37,10 +43,10 @@
             <div class="text_box text_top">
                 <p>TOP TEXT</p>
             </div>
-            <div class="img_medium"></div>
+            <div class="img_medium">
             <!-- <picture class="img_medium">
-                <img src="" alt="image.png">
-            </picture> -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDzc1UHig88ltnvbEgdmgLtEbRsu7M5wtQBA&s" alt="image.png">
+            </picture>--></div> 
             <div class="text_box text_bottom">
                 <p>BOTTOM TEXT</p>
             </div>
@@ -55,13 +61,12 @@
         <aside class="right_side_container">
             <section id="tab_img">
                 <div class="right_side_box">
-                    <picture class="button_close">
-                        <a href="">
-                        <img src="./assets/XCircle.svg" alt="boton-de-cierre"></a>
-                    </picture>
+                    <button class="button_close">
+                        <img src="./assets/XCircle.svg" alt="boton-de-cierre">
+                    </button>
                     <legend class="text_legend">IMAGEN</legend>
                     <label for="url">URL
-                        <input type="url" name="url" class="link-input" id="link-input">
+                        <input type="url" name="url" class="link-input" id="link_input">
                     </label>
                     <label>FONDO
                         <input type="color" name="color">

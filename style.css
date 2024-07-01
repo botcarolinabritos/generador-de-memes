@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.hidden {
-    display: none;
-}
-
 
 .box_all_container {
     display: flex;
@@ -128,8 +124,11 @@ button:hover {
 
 
 
-
 /*    ASIDE  IMG   */
+
+.hidden {
+    display: none;
+}
 
 .right_side_container {
     max-width: 500px;
@@ -182,6 +181,11 @@ button:hover {
 .select_option {
     background-color: #191E2B;
     color: #fafafa;
+}
+
+.box_inputs {
+    appearance: none;
+    accent-color: #900c3e;
 }
 
 .box_inputs label {
@@ -245,14 +249,12 @@ textarea {
 
 @media (min-width: 1024px) {
 
-    #columns-sections {
-        display: flex;
-        flex-grow: 1;
-        background-color: #303440;
-        padding: 242px;
+    .columns-sections {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #303440;
+        padding: 242px;
     }
 
     .right_side_container {
