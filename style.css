@@ -149,13 +149,13 @@ button:hover {
     z-index: 1;
 }
 
-.button_close {
+.button_close{
     display: flex;
     justify-content: flex-end;
 }
 
-.button_close img {
-    width: 30px;
+.button_close img{
+    width: 35px;
 }
 
 .right_side_box {
@@ -186,6 +186,7 @@ button:hover {
 .box_inputs {
     appearance: none;
     accent-color: #900c3e;
+    /* padding-block: 30px; */
 }
 
 .box_inputs label {

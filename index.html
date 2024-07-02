@@ -43,10 +43,9 @@
             <div class="text_box text_top">
                 <p>TOP TEXT</p>
             </div>
-            <div class="img_medium">
-            <!-- <picture class="img_medium">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDzc1UHig88ltnvbEgdmgLtEbRsu7M5wtQBA&s" alt="image.png">
-            </picture>--></div> 
+            <div class="img_medium" >
+            <!-- <img id="img_meme" src="" alt="image.png"> -->
+            </div>   
             <div class="text_box text_bottom">
                 <p>BOTTOM TEXT</p>
             </div>
@@ -61,7 +60,7 @@
         <aside class="right_side_container">
             <section id="tab_img">
                 <div class="right_side_box">
-                    <button class="button_close">
+                    <button class="button_close" id="button_close_img">
                         <img src="./assets/XCircle.svg" alt="boton-de-cierre">
                     </button>
                     <legend class="text_legend">IMAGEN</legend>
@@ -81,31 +80,34 @@
                     </select>
                     <div class="box_inputs">
                         <label for="range">BRILLO
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_brightness" min="0" max="1" step="0.1" value="1">
                         </label>
                         <label for="range">OPACIDAD
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_opacity" min="0" max="1" step="0.1" value="1">
                         </label>
                         <label for="range">CONTRASTE
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_contrast" min="100" max="1000" step="1" value="100">
                         </label>
                         <label for="range">DESENFOQUE
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_blur" min="0" max="10" step="0.1" value="0">
                         </label>
                         <label for="range">ESCALA DE GRISES
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_grayscale" min="0" max="100"
+                            step="1" value="0">
                         </label>
                         <label for="range">SEPIA
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_sepia" min="0" max="100"
+                            step="1" value="0">
                         </label>
                         <label for="range">HUE
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_hue" min="0" max="359"
+                            step="1" value="0">
                         </label>
                         <label for="range">SATURADO
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_saturation" min="100" max="1000" step="1" value="100">
                         </label>
                         <label for="range">NEGATIVO
-                            <input type="range" name="range" id="">
+                            <input type="range" name="range" id="slider_invert" min="0" max="1" step="0.1" value="0">
                         </label>
                     </div>
                 </div>
@@ -114,9 +116,8 @@
             <section id="tab_text">
                 <div class="right_side_box">
 
-                    <picture class="button_close">
-                        <a href="">
-                        <img src="./assets/XCircle.svg" alt="boton-de-cierre"></a>
+                    <picture class="button_close" id="button_close_txt">
+                        <img src="./assets/XCircle.svg" alt="boton-de-cierre">
                     </picture>
                     <legend class="text_legend">TEXTO</legend>
                     <label for="text">SUPERIOR
@@ -192,10 +193,10 @@
                 </div>
             </section>
         </aside>
-    <!-- </main> -->
 
-
+    
     <script src="main.js"></script>
+    <!-- <script src="app.js"></script> -->
 
 </body>
 
