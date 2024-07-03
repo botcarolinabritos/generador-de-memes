@@ -136,7 +136,7 @@ button:hover {
     /* visibility: hidden; */
     background-color: #252934;
     color: #fafafa;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 #tab_img , #tab_text{
@@ -159,6 +159,7 @@ button:hover {
 }
 
 .right_side_box {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 15px;
