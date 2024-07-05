@@ -1,20 +1,20 @@
             //PANELES OCULTOS//
 
 
-const tabImg = document.querySelector("#tab_img");
-const tabText = document.querySelector("#tab_text");
-tabImg.classList.add("hidden");
-tabText.classList.add("hidden");
+// const tabImg = document.querySelector("#tab_img");
+// const tabText = document.querySelector("#tab_text");
+// tabImg.classList.add("hidden");
+// tabText.classList.add("hidden");
 
-const botonImagen = document.querySelector("#button_img");
-botonImagen.addEventListener("click", function(){
-    tabImg.classList.toggle("hidden");
-});
+// const botonImagen = document.querySelector("#button_img");
+// botonImagen.addEventListener("click", function(){
+//     tabImg.classList.toggle("hidden");
+// });
 
-const botonTexto = document.querySelector("#button_text");
-botonTexto.addEventListener("click", function(){
-    tabText.classList.toggle("hidden");
-})
+// const botonTexto = document.querySelector("#button_text");
+// botonTexto.addEventListener("click", function(){
+//     tabText.classList.toggle("hidden");
+// })
 
 
             // BOTON CERRAR //
@@ -91,6 +91,24 @@ botonModoOscuro.addEventListener("click", function(){
 
 
 
+
+            // URL //
+
+
+const campoUrl = document.getElementById("link_input");
+const miMeme = document.getElementById("img_meme") 
+
+campoUrl.addEventListener("change", function() {
+    let element = document.createElement("img");
+    element.setAttribute("src", campoUrl.value);
+    element.setAttribute("alt", "image.png");
+    element.setAttribute("id", "img_meme");
+    document.querySelector(".img_medium").appendChild(element);
+
+}
+);
+
+
             // BOTON DESCARGA //
 
 
@@ -100,28 +118,14 @@ const contenedorDescarga = document.querySelector(".all_text_box");
 function descargarMeme () {
     domtoimage.toBlob(contenedorDescarga).then(function (blob) {
         saveAs(blob, 'meme.png')
-    }
-);
+        console.log(blob);
+    });
 }
 
 botonDescarga.addEventListener("click", descargarMeme);
+            
+            
 
-
-            // URL //
-
-
-const campoUrl = document.getElementById("link_input");
-
-campoUrl.addEventListener("change", function() {
-    let element = document.createElement("img");
-    element.setAttribute("src", campoUrl.value);
-    element.setAttribute("alt", "image.png");
-    element.setAttribute("id", "img_meme");
-    console.log(element);
-    document.querySelector(".img_medium").append(element);
-
-}
-);
 
 
             // FILTROS //
@@ -137,7 +141,6 @@ const sliderSatur = document.getElementById("slider_saturation");
 const sliderInver = document.getElementById("slider_invert");
 const imagen = document.getElementById("img_meme");
 
-// Funcion para actualizar los filtros en todo momento
 function actualizarFiltros() {
     const brillo = `brightness(${sliderBril.value})`;
     const desenfoque = `blur(${sliderBlor.value}px)`;
@@ -149,13 +152,15 @@ function actualizarFiltros() {
     const negativo = `invert(${sliderInver.value})`;
     
     const filtros = `${brillo} ${desenfoque} ${contraste} ${grises} ${sepia} ${hue} ${saturado} ${negativo}`;
+
     if (imagen != null) {
         imagen.style.filter = filtros;
         imagen.style.opacity = sliderOpac.value;
     }
+
+    // $('img_meme').style.filtros = filtros;
 }
 
-// Agregado de eventos para cada uno de los sliders
 sliderOpac.addEventListener("input", actualizarFiltros);
 sliderBril.addEventListener("input", actualizarFiltros);
 sliderBlor.addEventListener("input", actualizarFiltros);
@@ -169,7 +174,24 @@ sliderInver.addEventListener("input", actualizarFiltros);
 actualizarFiltros();
 
 
-                //OCULTAR TEXTO SUPERIOR E INFERIOR //
+
+                // CAMBIAR TEXTO SUPERIOR E INFERIOR //
+
+
+const campoSup = document.querySelectorAll("#text_area")[0];
+const campoInf = document.querySelectorAll("#text_area")[1];
+
+campoSup.addEventListener("change", function() {
+    supText.children[0].innerHTML = campoSup.value;
+});
+
+campoInf.addEventListener("change", function() {
+    infText.children[0].innerHTML = campoInf.value;
+});
+
+
+                // OCULTAR TEXTO SUPERIOR E INFERIOR //
+
 
 
 const supText = document.querySelector(".top_txt");

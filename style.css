@@ -112,6 +112,7 @@ button:hover {
 
 .img_medium img {
     width: 100%;
+    height: 100%;
 }
 
 .button_download {
@@ -142,11 +143,11 @@ button:hover {
 #tab_img , #tab_text{
     width: 100%;
     background-color: #252934;
-    position: fixed;
+    /* position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 1; */
 }
 
 .button_close{
@@ -234,7 +235,7 @@ textarea {
 }
 
 .main_background_light {
-    background-color: rgba(225, 230, 230, 0.676);
+    background-color: rgb(225, 230, 230);
 }
 
 
