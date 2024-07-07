@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-    crossorigin="anonymous"></script>
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
 
@@ -30,7 +30,7 @@
                         Texto</button>
                 </div>
                 <div class="box box_modo">
-                    <button class="button_modo" id="button_dark"> <img
+                    <button class="button_modo" id="button_dark_light"> <img
                             src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png"
                             alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo
                         claro</button>
@@ -39,19 +39,19 @@
         </div>
     </header>
     <main class="columns_sections">
-        <div class="all_text_box">
+        <div class="all_text_box" id="box_meme">
             <div class="text_box top_txt">
                 <p>TOP TEXT</p>
             </div>
             <div class="img_medium" >
-                <!-- <img src="https://img.freepik.com/fotos-premium/personaje-scooby-doo_981061-7060.jpg?w=740" alt=""> -->
+                <img src= alt="mi_meme" id="img_meme">
             </div>   
             <div class="text_box bottom_txt">
                 <p>BOTTOM TEXT</p>
             </div>
         </div>
         <div>
-            <button class="button_download">Descargar meme</button>
+            <button class="button_download" id="btn_download">Descargar meme</button>
         </div>
     </main>
 
