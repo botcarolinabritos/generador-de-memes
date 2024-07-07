@@ -19,6 +19,7 @@ botonTexto.addEventListener("click", function(){
 
             // BOTON CERRAR //
 
+
 const botonCerrarImg = document.getElementById("button_close_img");
 botonCerrarImg.addEventListener("click", function(e){
     // console.log(botonCerrar.parentElement.parentElement);
@@ -53,10 +54,9 @@ botonModoOscuro.addEventListener("click", function(){
     botonTexto.classList.toggle("color_buttons_black");
     botonModoOscuro.classList.toggle("color_buttons_black");
     
-    botonModoOscuro.addEventListener("click" , function() {
-        botonModoOscuro.innerHTML = `<img
-                                src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
-    });  
+    botonModoOscuro.addEventListener("click", function() {
+        botonModoOscuro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
+    });
 
 
     document.querySelector(".columns_sections").classList.toggle("main_background_light");
@@ -91,8 +91,8 @@ botonModoOscuro.addEventListener("click", function(){
             // BOTON DESCARGA MEME//
 
 
-const botonDescarga = document.getElementById("box_meme");
-const contenedorDescarga = document.getElementById("btn_download");
+const botonDescarga = document.getElementById("btn_download");
+const contenedorDescarga = document.getElementById("box_meme");
 
 function descargarMeme () {
     domtoimage.toBlob(contenedorDescarga).then(function (blob) {
@@ -113,7 +113,8 @@ const miMeme = document.getElementById("img_meme");
 
 campoUrl.addEventListener("change", function() {
     miMeme.setAttribute("src", campoUrl.value);
-    miMeme.setAttribute("alt", "image.png");}
+    miMeme.setAttribute("alt", "image.png");
+}
 );
 
 
@@ -158,11 +159,10 @@ sliderHue.addEventListener("input", actualizarFiltros);
 sliderSatur.addEventListener("input", actualizarFiltros);
 sliderInver.addEventListener("input", actualizarFiltros);
 
-// actualizarFiltros();
 
 
 
-                // OCULTAR TEXTO SUPERIOR E INFERIOR //
+            // OCULTAR TEXTO SUPERIOR E INFERIOR //
 
 
 
@@ -181,7 +181,7 @@ checkInf.addEventListener("click", function() {
 
 
 
-                // CAMBIAR TEXTO SUPERIOR E INFERIOR //
+            // CAMBIAR TEXTO SUPERIOR E INFERIOR //
 
 
 const campoSup = document.querySelectorAll("#text_area")[0];
