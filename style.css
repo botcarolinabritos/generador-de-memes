@@ -96,17 +96,17 @@ button:hover {
 
 
 .text_box {
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 60px;
     background-color: #fafafa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 
 .img_medium {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height:300px;
     background-color: black;
 }
 
@@ -134,15 +134,12 @@ button:hover {
 .right_side_container {
     max-width: 500px;
     display: flex;
-    /* visibility: hidden; */
     background-color: #252934;
     color: #fafafa;
-    /* padding: 20px; */
 }
 
 #tab_img , #tab_text{
     width: 100%;
-    padding: 15px;
     background-color: #252934;
     position: fixed;
     right: 0;
@@ -160,14 +157,15 @@ button:hover {
     width: 35px;
 }
 
-.right_side_box {
+.right_side_box_img {
     height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 15px;
 }
 
-.right_side_box label {
+.right_side_box_img label {
     display: flex;
 }
 
@@ -198,11 +196,30 @@ button:hover {
     padding: 5px;
 }
 
+#restore_btn {
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+
 
 /*  ASIDE  TEXT  */
 
+.right_side_box_txt {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.right_side_box_txt label {
+    display: flex;
+}
+
 textarea {
     display: flex;
+    width: 230px;
+    height: 60px;
 }
 
 .box_font {
@@ -231,9 +248,9 @@ textarea {
     color: black;
 }
 
-.color_buttons_black {
+/* .color_buttons_black {
     color: black;
-}
+} */
 
 .main_background_light {
     background-color: rgb(225, 230, 230);

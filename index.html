@@ -30,10 +30,16 @@
                         Texto</button>
                 </div>
                 <div class="box box_modo">
-                    <button class="button_modo" id="button_dark_light"> <img
+                    <button class="button_modo" id="button_light"> <img
                             src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png"
                             alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo
                         claro</button>
+                </div>
+                <div class="box box_modo">
+                    <button class="button_modo" id="button_dark"> <img
+                            src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png"
+                            alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo
+                        oscuro</button>
                 </div>
             </div>
         </div>
@@ -59,10 +65,10 @@
 
         <aside class="right_side_container">
             <section id="tab_img">
-                <div class="right_side_box">
-                    <button class="button_close" id="button_close_img">
+                <div class="right_side_box_img">
+                    <picture class="button_close" id="button_close_img">
                         <img src="./assets/XCircle.svg" alt="boton-de-cierre">
-                    </button>
+                    </picture>
                     <legend class="text_legend">IMAGEN</legend>
                     <label for="url">URL
                         <input type="url" name="url" class="link-input" id="link_input">
@@ -110,13 +116,13 @@
                             <input type="range" name="range" id="slider_invert" min="0" max="1" step="0.1" value="0">
                         </label>
                     </div>
-                    <button class="panel_buttons">Restablecer filtros</button>
+                    <button id="restore_btn">Restablecer filtros</button>
                 </div>
-                
             </section>
-            <section id="tab_text">
-                <div class="right_side_box">
 
+
+            <section id="tab_text">
+                <div class="right_side_box_txt">
                     <picture class="button_close" id="button_close_txt">
                         <img src="./assets/XCircle.svg" alt="boton-de-cierre">
                     </picture>

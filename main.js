@@ -1,4 +1,6 @@
-            // PANELES OCULTOS //
+                    //  IMAGEN
+
+                // PANELES OCULTOS //
 
 
 const tabImg = document.querySelector("#tab_img");
@@ -7,6 +9,7 @@ tabImg.classList.add("hidden");
 tabText.classList.add("hidden");
 
 const botonImagen = document.querySelector("#button_img");
+
 botonImagen.addEventListener("click", function(){
     tabImg.classList.toggle("hidden");
 });
@@ -21,8 +24,7 @@ botonTexto.addEventListener("click", function(){
 
 
 const botonCerrarImg = document.getElementById("button_close_img");
-botonCerrarImg.addEventListener("click", function(e){
-    // console.log(botonCerrar.parentElement.parentElement);
+botonCerrarImg.addEventListener("click", function(){
     botonCerrarImg
         .parentElement
         .parentElement
@@ -32,8 +34,7 @@ botonCerrarImg.addEventListener("click", function(e){
 
 
 const botonCerrarTxt = document.getElementById("button_close_txt");
-botonCerrarTxt.addEventListener("click", function(e){
-    // console.log(botonCerrar.parentElement.parentElement);
+botonCerrarTxt.addEventListener("click", function(){
     botonCerrarTxt
         .parentElement
         .parentElement
@@ -42,47 +43,47 @@ botonCerrarTxt.addEventListener("click", function(e){
 });
 
 
+            // MODO CLARO , MODO OSCURO //
 
 
-            // MODO OSCURO , MODO CLARO //
+const botonModoClaro = document.querySelector("#button_light");
+const botonModoOscuro = document.querySelector("#button_dark");
+botonModoOscuro.classList.add("hidden");
 
-
-const botonModoOscuro = document.querySelector("#button_dark_light");
-botonModoOscuro.addEventListener("click", function(){
+botonModoClaro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
-    botonImagen.classList.toggle("color_buttons_black");
-    botonTexto.classList.toggle("color_buttons_black");
-    botonModoOscuro.classList.toggle("color_buttons_black");
+    botonImagen.classList.toggle("header_background_light");
+    botonTexto.classList.toggle("header_background_light");
+    botonModoClaro.classList.toggle("header_background_light");
+    botonModoOscuro.classList.toggle("header_background_light");
+    tabImg.classList.toggle("header_background_light");
+    tabText.classList.toggle("header_background_light");
+    restablecerFiltros.classList.toggle("header_background_light");
+    document.querySelector(".columns_sections").classList.toggle("main_background_light");
+    document.querySelector(".right_side_box_img").classList.toggle("header_background_light");
+    document.querySelector(".right_side_box_txt").classList.toggle("header_background_light");
+    document.querySelectorAll(button).classList.toggle("header_background_light");
     
+
+ // [...document.getElementsByTagName("label")].forEach((element) => {
+    //     element.classList.toggle("header_background_light");
+    // });
+
+    // [...document.getElementsByTagName("legend")].forEach((element) => {
+    //     element.classList.toggle("header_background_light");
+    // });
+
+    // [...document.getElementsByTagName("select")].forEach((element) => {
+    //     element.classList.toggle("header_background_light");
+    // });
+
+
+
+
+
+
     botonModoOscuro.addEventListener("click", function() {
         botonModoOscuro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
-    });
-
-
-    document.querySelector(".columns_sections").classList.toggle("main_background_light");
-    
-    [...document.getElementsByTagName("label")].forEach((element) => {
-        element.classList.toggle("header_background_light");
-    });
-
-    [...document.getElementsByTagName("legend")].forEach((element) => {
-        element.classList.toggle("header_background_light");
-    });
-
-    [...document.getElementsByTagName("select")].forEach((element) => {
-        element.classList.toggle("header_background_light");
-    });
-
-    [...document.querySelectorAll(".right_side_box")].forEach((element) => {
-        element.classList.toggle("header_background_light");
-    });
-
-    [...document.getElementsByTagName("section")].forEach((element) => {
-        element.classList.toggle("header_background_light");
-    });
-
-    [...document.querySelectorAll(".panel_buttons")].forEach((element) => {
-        element.classList.toggle("header_background_light");
     });
 });
 
@@ -129,7 +130,6 @@ const sliderSepia = document.getElementById("slider_sepia");
 const sliderHue = document.getElementById("slider_hue");
 const sliderSatur = document.getElementById("slider_saturation");
 const sliderInver = document.getElementById("slider_invert");
-// const miMeme = document.getElementById("img_meme");
 
 function actualizarFiltros() {
     const brillo = `brightness(${sliderBril.value})`;
@@ -159,7 +159,40 @@ sliderHue.addEventListener("input", actualizarFiltros);
 sliderSatur.addEventListener("input", actualizarFiltros);
 sliderInver.addEventListener("input", actualizarFiltros);
 
+// const restablecerFiltros = document.getElementById("restore_btn");
+// restablecerFiltros.addEventListener("click", function(e) {
+//     restablecerFiltros.remove('filtros');
+// })
 
+
+            // RESTABLECER FILTROS //
+
+
+const restablecerFiltros = document.getElementById("restore_btn");
+
+restablecerFiltros.addEventListener("click", function() {
+    miMeme.style.filter = "none";
+
+
+    sliderOpac.value = 1;
+    sliderBril.value = 1;
+    sliderBlor.value = 0;
+    sliderContr.value = 0;
+    sliderGris.value = 0;
+    sliderSepia.value = 0;
+    sliderHue.value = 0;
+    sliderSatur.value = 100;
+    sliderInver.value = 0;
+
+    restablecerFiltros();
+})
+
+
+
+
+
+
+                    //  TEXTO
 
 
             // OCULTAR TEXTO SUPERIOR E INFERIOR //
