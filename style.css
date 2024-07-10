@@ -29,7 +29,7 @@
 
 /*   MAIN */
 
-.columns_sections {
+.container_meme_box {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -96,17 +96,17 @@ button:hover {
 
 
 .text_box {
-    width: 400px;
+    width: 300px;
     height: 60px;
     background-color: #fafafa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 
 .img_medium {
-    width: 400px;
-    height:300px;
+    width: 300px;
+    height:280px;
     background-color: black;
 }
 
@@ -127,9 +127,6 @@ button:hover {
 
 /*    ASIDE  IMG   */
 
-.hidden {
-    display: none;
-}
 
 .right_side_container {
     max-width: 500px;
@@ -241,19 +238,26 @@ textarea {
 }
 
 
-/* MODO CLARO */
+
+
+/* CLASES DESDE JS */
+
+.hidden {
+    display: none;
+}
 
 .header_background_light {
     background-color: rgb(146, 150, 150);
     color: black;
 }
 
-/* .color_buttons_black {
-    color: black;
-} */
 
 .main_background_light {
     background-color: rgb(225, 230, 230);
+}
+
+.background_transparent {
+    background-color: transparent;
 }
 
 
@@ -263,6 +267,20 @@ textarea {
 
 
 
+
+@media (min-width: 768px) {
+    .text_box {
+        width: 450px;
+        height: 60px;
+        font-size: 1.7rem;
+    }
+    
+    
+    .img_medium {
+        width: 450px;
+        height: 380px;
+    }
+}
 
 
 
@@ -270,20 +288,19 @@ textarea {
 
 @media (min-width: 1024px) {
 
-    .columns-sections {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #303440;
-        padding: 242px;
-    }
-
-    .right_side_container {
-        height: 100vh;
+    /* .right_side_box_img {
         position: fixed;
         right: 0;
         top: 0;
         z-index: 1;
+    } */
+
+    #tab_img , #tab_text{
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
     }
-    
+
 }

@@ -1,5 +1,3 @@
-                    //  IMAGEN
-
                 // PANELES OCULTOS //
 
 
@@ -46,45 +44,33 @@ botonCerrarTxt.addEventListener("click", function(){
             // MODO CLARO , MODO OSCURO //
 
 
-const botonModoClaro = document.querySelector("#button_light");
-const botonModoOscuro = document.querySelector("#button_dark");
-botonModoOscuro.classList.add("hidden");
+const botonModoClaro = document.querySelector("#button_light_dark");
 
 botonModoClaro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
     botonImagen.classList.toggle("header_background_light");
     botonTexto.classList.toggle("header_background_light");
     botonModoClaro.classList.toggle("header_background_light");
-    botonModoOscuro.classList.toggle("header_background_light");
     tabImg.classList.toggle("header_background_light");
     tabText.classList.toggle("header_background_light");
     restablecerFiltros.classList.toggle("header_background_light");
-    document.querySelector(".columns_sections").classList.toggle("main_background_light");
+    document.querySelector(".container_meme_box").classList.toggle("main_background_light");
     document.querySelector(".right_side_box_img").classList.toggle("header_background_light");
     document.querySelector(".right_side_box_txt").classList.toggle("header_background_light");
-    document.querySelectorAll(button).classList.toggle("header_background_light");
+    
+    [...document.getElementsByTagName("label")].forEach((element) => {
+        element.classList.toggle("header_background_light");
+    });
+
+    [...document.getElementsByTagName("select")].forEach((element) => {
+        element.classList.toggle("header_background_light");
+    });
     
 
- // [...document.getElementsByTagName("label")].forEach((element) => {
-    //     element.classList.toggle("header_background_light");
-    // });
+    botonModoClaro.addEventListener("click", function() {
+        botonModoClaro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
+});
 
-    // [...document.getElementsByTagName("legend")].forEach((element) => {
-    //     element.classList.toggle("header_background_light");
-    // });
-
-    // [...document.getElementsByTagName("select")].forEach((element) => {
-    //     element.classList.toggle("header_background_light");
-    // });
-
-
-
-
-
-
-    botonModoOscuro.addEventListener("click", function() {
-        botonModoOscuro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
-    });
 });
 
 
@@ -104,6 +90,8 @@ function descargarMeme () {
 botonDescarga.addEventListener("click", descargarMeme);
 
 
+
+                        //  IMAGEN //
 
 
             // URL //
@@ -159,10 +147,7 @@ sliderHue.addEventListener("input", actualizarFiltros);
 sliderSatur.addEventListener("input", actualizarFiltros);
 sliderInver.addEventListener("input", actualizarFiltros);
 
-// const restablecerFiltros = document.getElementById("restore_btn");
-// restablecerFiltros.addEventListener("click", function(e) {
-//     restablecerFiltros.remove('filtros');
-// })
+
 
 
             // RESTABLECER FILTROS //
@@ -195,8 +180,23 @@ restablecerFiltros.addEventListener("click", function() {
                     //  TEXTO
 
 
-            // OCULTAR TEXTO SUPERIOR E INFERIOR //
+            // CAMBIAR TEXTO SUPERIOR E INFERIOR //
 
+
+const campoSup = document.querySelectorAll("#text_area")[0];
+const campoInf = document.querySelectorAll("#text_area")[1];
+
+campoSup.addEventListener("change", function() {
+    supText.children[0].innerHTML = campoSup.value;
+});
+
+campoInf.addEventListener("change", function() {
+    infText.children[0].innerHTML = campoInf.value;
+});
+
+
+
+           // OCULTAR TEXTO SUPERIOR E INFERIOR //
 
 
 const supText = document.querySelector(".top_txt");
@@ -214,16 +214,36 @@ checkInf.addEventListener("click", function() {
 
 
 
-            // CAMBIAR TEXTO SUPERIOR E INFERIOR //
+            // FUENTE //
+
+const fontOptions = document.getElementById("font_options");
+
+fontOptions.addEventListener("change" , (e) => {
+    supText.style.fontFamily = e.target.value;
+    infText.style.fontFamily = e.target.value;
+})
 
 
-const campoSup = document.querySelectorAll("#text_area")[0];
-const campoInf = document.querySelectorAll("#text_area")[1];
+            // TAMAÑO DE FUENTE //
 
-campoSup.addEventListener("change", function() {
-    supText.children[0].innerHTML = campoSup.value;
-});
+const sizeTxt = document.getElementById("font_size_txt");
 
-campoInf.addEventListener("change", function() {
-    infText.children[0].innerHTML = campoInf.value;
-});
+sizeTxt.addEventListener("change", (e) => {
+    console.log(e.target.value);
+    supText.style.fontSize = e.target.value;
+    infText.style.fontSize = e.target.value;
+})
+
+
+            // FONDO TEXTO TRANSPARENTE //
+
+
+const checkTransparente = document.getElementById("check_transparent");
+
+checkTransparente.addEventListener("click", function() {
+    supText.classList.toggle("background_transparent");
+})
+
+checkTransparente.addEventListener("click", function() {
+    infText.classList.toggle("background_transparent");
+})
