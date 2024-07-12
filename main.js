@@ -41,10 +41,15 @@ botonCerrarTxt.addEventListener("click", function(){
 });
 
 
-            // MODO CLARO , MODO OSCURO //
-
+            // MODO CLARO , MODO OSCURO 
+            // nota: el error que ocurre, es que al hacer click en el botón Modo claro, no efectúa el cambio de texto a "Modo oscuro" inmediatamente, hay que clickear dos veces para que aparezca, y una vez que lo hace no vuelve a su valor default, queda aplicado el texto "Modo oscuro".
+            //
 
 const botonModoClaro = document.querySelector("#button_light_dark");
+
+botonModoClaro.addEventListener("click", function() {
+        botonModoClaro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
+});
 
 botonModoClaro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
@@ -65,14 +70,8 @@ botonModoClaro.addEventListener("click", function(){
     [...document.getElementsByTagName("select")].forEach((element) => {
         element.classList.toggle("header_background_light");
     });
-    
-
-    botonModoClaro.addEventListener("click", function() {
-        botonModoClaro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
-});
 
 });
-
 
 
             // BOTON DESCARGA MEME//
@@ -92,7 +91,6 @@ botonDescarga.addEventListener("click", descargarMeme);
 
 
                         //  IMAGEN //
-
 
             // URL //
 
@@ -174,9 +172,6 @@ restablecerFiltros.addEventListener("click", function() {
 
 
 
-
-
-
                     //  TEXTO
 
 
@@ -224,16 +219,43 @@ fontOptions.addEventListener("change" , (e) => {
 })
 
 
-            // TAMAÑO DE FUENTE //
+            // TAMAÑO DE FUENTE 
+            
+            // TOMA EL CODIGO, NO HAY ERROR EN CONSOLA
+            // PERO NO APLICA EL CAMBIO //
 
 const sizeTxt = document.getElementById("font_size_txt");
 
-sizeTxt.addEventListener("change", (e) => {
-    console.log(e.target.value);
-    supText.style.fontSize = e.target.value;
-    infText.style.fontSize = e.target.value;
+sizeTxt.addEventListener("input", function(e) {
+    let fontSize = this.value;
+    supText.style.fontSize = fontSize + "px";
+    infText.style.fontSize = fontSize + "px";
 })
 
+
+            // COLOR FUENTE
+            //se aplica el cambio, pero una vez que cambio de color, se borra el texto y se superpone el texto del color elegido//
+
+const txtSupParrafo = document.getElementById("txt_sup_inf");
+const txtInfParrafo = document.getElementById("txt_inf_sup");
+const colorTexto = document.getElementById("color");
+const colorFondoTxt = document.getElementById("bground_color_txt");
+
+colorTexto.addEventListener("input", function() {
+    txtSupParrafo.textContent = colorTexto.value;
+    txtSupParrafo.style.color = colorTexto.value;
+    txtInfParrafo.textContent = colorTexto.value;
+    txtInfParrafo.style.color = colorTexto.value;
+    console.log(colorTexto);
+});
+
+
+            //FONDO COLOR //
+
+colorFondoTxt.addEventListener("input", function() {
+    console.log(colorFondoTxt);
+    contenedorDescarga.style.backgroundColor = colorFondoTxt.value;
+});
 
             // FONDO TEXTO TRANSPARENTE //
 
@@ -247,3 +269,13 @@ checkTransparente.addEventListener("click", function() {
 checkTransparente.addEventListener("click", function() {
     infText.classList.toggle("background_transparent");
 })
+
+
+
+
+// const intelineado = document.getElementById("intelineado")
+// intelineado.addEventListener("click",function(e){
+//     const intelineado1 =intelineado.value;
+//     text_superior.style.lineHeight = intelineado1;
+//     text_inferior.style.lineHeight= intelineado1;
+//     console.log("funcionando", intelineado1)

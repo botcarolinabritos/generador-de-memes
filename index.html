@@ -41,13 +41,13 @@
     <main class="container_meme_box">
         <div class="all_text_box" id="box_meme">
             <div class="text_box top_txt">
-                <p class="txt_sup_inf">TOP TEXT</p>
+                <p id="txt_sup_inf">TOP TEXT</p>
             </div>
             <div class="img_medium" >
                 <img src="" alt="" id="img_meme">
             </div>   
             <div class="text_box bottom_txt">
-                <p class="txt_sup_inf">BOTTOM TEXT</p>
+                <p id="txt_inf_sup">BOTTOM TEXT</p>
             </div>
         </div>
         <div>
@@ -115,6 +115,9 @@
             </section>
 
 
+                    <!-- REALIZAR CAMBIO EN EL TEXT AREA -->
+
+
             <section id="tab_text">
                 <div class="right_side_box_txt">
                     <picture class="button_close" id="button_close_txt">
@@ -122,13 +125,13 @@
                     </picture>
                     <legend class="text_legend">TEXTO</legend>
                     <label for="text">SUPERIOR
-                        <textarea name="text" id="text_area"></textarea>
+                        <textarea name="text" id="text_area" cols="30" rows="10"></textarea>
                     </label>
                     <label for="checkbox">Sin texto superior
                         <input type="checkbox" name="checkbox" id="check_sup_txt">
                     </label>
                     <label for="text">INFERIOR
-                        <textarea name="text" id="text_area"></textarea>
+                        <textarea name="text" id="text_area" cols="30" rows="10"></textarea>
                     </label>
                     <label for="checkbox">Sin texto inferior
                         <input type="checkbox" name="checkbox" id="check_inf_txt">
@@ -149,7 +152,7 @@
                     </div>
                     <div>
                         <label for="number">
-                            <input type="number" name="number" id="font_size_txt" min="1" max="100">
+                            <input type="number" name="number" id="font_size_txt" min="1" max="80">
                         </label>
                         <button><img width="24" height="24"
                                 src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/align-left.png"
@@ -163,10 +166,10 @@
                     </div>
                     <div class="box_color">
                         <label for="color">COLOR
-                            <input type="color" name="color" id="">
+                            <input type="color" name="color" id="color">
                         </label>
                         <label for="color">FONDO
-                            <input type="color" name="color" id="">
+                            <input type="color" name="color" id="bground_color_txt">
                         </label>
                     </div> <label for="checkbox">Fondo transparente
                         <input type="checkbox" name="checkbox" id="check_transparent">
@@ -194,6 +197,7 @@
                 </div>
             </section>
         </aside>
+
 
     
     <script src="main.js"></script>
