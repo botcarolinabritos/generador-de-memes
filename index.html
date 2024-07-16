@@ -43,7 +43,7 @@
             <div class="text_box top_txt">
                 <p id="txt_sup_inf">TOP TEXT</p>
             </div>
-            <div class="img_medium" >
+            <div class="img_medium" id="box_meme_bground">
                 <img src="" alt="" id="img_meme">
             </div>   
             <div class="text_box bottom_txt">
@@ -68,7 +68,7 @@
                         <input type="url" name="url" class="link-input" id="link_input">
                     </label>
                     <label>FONDO
-                        <input type="color" name="color" id="bground_color">
+                        <input type="color" name="color" id="bground_color_meme">
                     </label>
                     <select name="select" class="select_option" id="select_option">
                         <option value="value1">Ninguno</option>
@@ -150,21 +150,21 @@
                     </div>
                     <div>
                         <label for="number">
-                            <input type="number" name="number" id="font_size_txt" min="1" max="80">
+                            <input type="number" name="number" id="font_size_txt" min="1" max="50">
                         </label>
-                        <button><img width="24" height="24"
+                        <button id="btn_align_left"><img width="24" height="24"
                                 src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/align-left.png"
                                 alt="align-left" /></button>
-                        <button><img width="24" height="24"
+                        <button id="btn_aling_center"><img width="24" height="24"
                                 src="https://img.icons8.com/material-sharp/24/FFFFFF/align-cell-content-center.png"
                                 alt="align-cell-content-center" /></button>
-                        <button><img width="24" height="24"
+                        <button id="btn_align_right"><img width="24" height="24"
                                 src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/align-right.png"
                                 alt="align-right" /></button>
                     </div>
                     <div class="box_color">
                         <label for="color">COLOR
-                            <input type="color" name="color" id="color">
+                            <input type="color" name="color" id="font_color">
                         </label>
                         <label for="color">FONDO
                             <input type="color" name="color" id="bground_color_txt">
@@ -184,13 +184,13 @@
                             <input type="number" name="number" id="" min="10" max="50">
                         </label>
                         <label for="">INTERLINEADO</label>
-                        <select name="select" id="select_option" class="select_option">
-                            <option value="">0.8</option>
-                            <option value="">1</option>
-                            <option value="" selected>1.2</option>
-                            <option value="">1.5</option>
-                            <option value="">2</option>
-                            <option value="">2.5</option>
+                        <select name="select" id="line_spacing_option" class="select_option">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2" selected>1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
                         </select>
                     </div>
                 </div>

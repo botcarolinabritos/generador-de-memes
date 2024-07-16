@@ -105,6 +105,25 @@ campoUrl.addEventListener("change", function() {
 );
 
 
+            // FONDO DE COLOR IMG //
+
+const colorFondoImg = document.getElementById("bground_color_meme");
+const backgroundMeme = document.getElementById("box_meme_bground");
+
+// colorFondoTxt.addEventListener("input", (e) => {
+//     backgroundMeme.style.backgroundColor = e.target.value;
+// });
+            
+colorFondoImg.addEventListener("input", (e) => {
+    if (backgroundMeme != null) {
+        backgroundMeme.style.background = e.target.value;
+    }
+    else {
+        backgroundMeme.style.backgroundColor = "black";
+    }
+});
+
+
             // FILTROS //
 
 const sliderOpac = document.getElementById("slider_opacity");
@@ -209,7 +228,7 @@ checkInf.addEventListener("click", function() {
 
 
 
-            // FUENTE //
+            // ESTILO DE FUENTE //
 
 const fontOptions = document.getElementById("font_options");
 
@@ -220,9 +239,6 @@ fontOptions.addEventListener("change" , (e) => {
 
 
             // TAMAÑO DE FUENTE 
-            
-            // TOMA EL CODIGO, NO HAY ERROR EN CONSOLA
-            // PERO NO APLICA EL CAMBIO //
 
 const sizeTxt = document.getElementById("font_size_txt");
 
@@ -234,27 +250,30 @@ sizeTxt.addEventListener("input", function(e) {
 
 
             // COLOR FUENTE
-            //se aplica el cambio, pero una vez que cambio de color, se borra el texto y se superpone el texto del color elegido//
+            //se aplica el cambio, pero una vez que cambio de color, se borra el texto y se superpone el texto del color elegido
+            //cambié el text-area en HTML por inputs y ya no funciona. No se aplican los cambios.
 
-const txtSupParrafo = document.getElementById("txt_sup_inf");
-const txtInfParrafo = document.getElementById("txt_inf_sup");
-const colorTexto = document.getElementById("color");
-const colorFondoTxt = document.getElementById("bground_color_txt");
+// const txtSupParrafo = document.getElementById("txt_sup_inf");
+// const txtInfParrafo = document.getElementById("txt_inf_sup");
+const colorTxt = document.getElementById("font_color");
 
-colorTexto.addEventListener("input", function() {
-    txtSupParrafo.textContent = colorTexto.value;
-    txtSupParrafo.style.color = colorTexto.value;
-    txtInfParrafo.textContent = colorTexto.value;
-    txtInfParrafo.style.color = colorTexto.value;
-    console.log(colorTexto);
+
+            // COLOR DE FUENTE //
+
+
+colorTxt.addEventListener("input", (e) => {
+    supText.style.color = e.target.value;
+    infText.style.color = e.target.value;
 });
 
 
-            //FONDO COLOR //
+            // COLOR DE FONDO //
 
-colorFondoTxt.addEventListener("input", function() {
-    console.log(colorFondoTxt);
-    contenedorDescarga.style.backgroundColor = colorFondoTxt.value;
+const colorFondoTxt = document.getElementById("bground_color_txt");
+
+colorFondoTxt.addEventListener("input", (e) => {
+    supText.style.backgroundColor = e.target.value;
+    infText.style.backgroundColor = e.target.value;
 });
 
             // FONDO TEXTO TRANSPARENTE //
@@ -271,11 +290,11 @@ checkTransparente.addEventListener("click", function() {
 })
 
 
+            // INTERLINEADO //
 
+const lineSpacing = document.getElementById("line_spacing_option")
 
-// const interlineado = document.getElementById("select_option")
-// interlineado.addEventListener("click",function(){
-//     const interlineado1 = interlineado.value;
-//     supText.style.lineHeight = interlineado1;
-//     infText.style.lineHeight = interlineado1;
-// });
+lineSpacing.addEventListener("change", (e) => {
+    supText.style.lineHeight = e.target.value;
+    infText.style.lineHeight = e.target.value;
+});

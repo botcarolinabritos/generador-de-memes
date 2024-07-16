@@ -95,8 +95,8 @@ button:hover {
 
 
 .text_box {
-    width: 300px;
-    height: 60px;
+    width: 310px;
+    height: 65px;
     background-color: #fafafa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.4rem;
@@ -104,9 +104,9 @@ button:hover {
 
 
 .img_medium {
-    width: 300px;
+    width: 310px;
     height:280px;
-    background-color: black;
+    /* background-color: black; */
 }
 
 #img_meme {
@@ -226,7 +226,6 @@ button:hover {
 #add_text_sup , #add_text_inf {
     width: 230px;
     height: 25px;
-    text-align: center;
 }
 
 .box_font {
@@ -289,7 +288,7 @@ button:hover {
 
     .text_box {
         width: 450px;
-        height: 60px;
+        height: 80px;
         font-size: 1.7rem;
     }
     
