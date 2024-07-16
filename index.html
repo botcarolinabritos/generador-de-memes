@@ -115,8 +115,6 @@
             </section>
 
 
-                    <!-- REALIZAR CAMBIO EN EL TEXT AREA -->
-
 
             <section id="tab_text">
                 <div class="right_side_box_txt">
@@ -125,13 +123,13 @@
                     </picture>
                     <legend class="text_legend">TEXTO</legend>
                     <label for="text">SUPERIOR
-                        <textarea name="text" id="text_area" cols="30" rows="10"></textarea>
+                        <input type="text" name="text" id="add_text_sup">
                     </label>
                     <label for="checkbox">Sin texto superior
                         <input type="checkbox" name="checkbox" id="check_sup_txt">
                     </label>
                     <label for="text">INFERIOR
-                        <textarea name="text" id="text_area" cols="30" rows="10"></textarea>
+                        <input type="text" name="text" id="add_text_inf">
                     </label>
                     <label for="checkbox">Sin texto inferior
                         <input type="checkbox" name="checkbox" id="check_inf_txt">
@@ -171,7 +169,8 @@
                         <label for="color">FONDO
                             <input type="color" name="color" id="bground_color_txt">
                         </label>
-                    </div> <label for="checkbox">Fondo transparente
+                    </div> 
+                    <label for="checkbox">Fondo transparente
                         <input type="checkbox" name="checkbox" id="check_transparent">
                     </label>
                     <div>
@@ -185,7 +184,7 @@
                             <input type="number" name="number" id="" min="10" max="50">
                         </label>
                         <label for="">INTERLINEADO</label>
-                        <select name="select" id="" class="select_option">
+                        <select name="select" id="select_option" class="select_option">
                             <option value="">0.8</option>
                             <option value="">1</option>
                             <option value="" selected>1.2</option>

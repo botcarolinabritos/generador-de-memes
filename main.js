@@ -178,15 +178,15 @@ restablecerFiltros.addEventListener("click", function() {
             // CAMBIAR TEXTO SUPERIOR E INFERIOR //
 
 
-const campoSup = document.querySelectorAll("#text_area")[0];
-const campoInf = document.querySelectorAll("#text_area")[1];
+const campoSup = document.getElementById("add_text_sup");
+const campoInf = document.getElementById("add_text_inf");
 
 campoSup.addEventListener("change", function() {
-    supText.children[0].innerHTML = campoSup.value;
+    supText.innerHTML = campoSup.value;
 });
 
 campoInf.addEventListener("change", function() {
-    infText.children[0].innerHTML = campoInf.value;
+    infText.innerHTML = campoInf.value;
 });
 
 
@@ -273,9 +273,9 @@ checkTransparente.addEventListener("click", function() {
 
 
 
-// const intelineado = document.getElementById("intelineado")
-// intelineado.addEventListener("click",function(e){
-//     const intelineado1 =intelineado.value;
-//     text_superior.style.lineHeight = intelineado1;
-//     text_inferior.style.lineHeight= intelineado1;
-//     console.log("funcionando", intelineado1)
+// const interlineado = document.getElementById("select_option")
+// interlineado.addEventListener("click",function(){
+//     const interlineado1 = interlineado.value;
+//     supText.style.lineHeight = interlineado1;
+//     infText.style.lineHeight = interlineado1;
+// });
