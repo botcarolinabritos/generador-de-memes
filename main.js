@@ -249,17 +249,31 @@ sizeTxt.addEventListener("input", function(e) {
 })
 
 
-            // COLOR FUENTE
-            //se aplica el cambio, pero una vez que cambio de color, se borra el texto y se superpone el texto del color elegido
-            //cambié el text-area en HTML por inputs y ya no funciona. No se aplican los cambios.
+            // ALINEACION DE TEXTO 
 
-// const txtSupParrafo = document.getElementById("txt_sup_inf");
-// const txtInfParrafo = document.getElementById("txt_inf_sup");
-const colorTxt = document.getElementById("font_color");
+const alignLeft = document.getElementById("btn_align_left");
+const alignCenter = document.getElementById("btn_align_center");
+const alignRight = document.getElementById("btn_align_right");
 
+alignLeft.addEventListener("click", function() {
+    console.log(alignLeft);
+    supText.style.justifyContent = "left";
+    infText.style.justifyContent = "left";
+})
+
+alignCenter.addEventListener("click", function() {
+    supText.style.justifyContent = "center";
+    infText.style.justifyContent = 'center';
+})
+
+alignRight.addEventListener("click", function() {
+    supText.style.justifyContent = "right";
+    infText.style.justifyContent = "right";
+})
 
             // COLOR DE FUENTE //
 
+const colorTxt = document.getElementById("font_color");
 
 colorTxt.addEventListener("input", (e) => {
     supText.style.color = e.target.value;
@@ -276,8 +290,8 @@ colorFondoTxt.addEventListener("input", (e) => {
     infText.style.backgroundColor = e.target.value;
 });
 
-            // FONDO TEXTO TRANSPARENTE //
-
+            // FONDO TEXTO TRANSPARENTE
+            //nota: una vez que se selecciona un color de fondo, no se aplica el fondo transparente.
 
 const checkTransparente = document.getElementById("check_transparent");
 
