@@ -58,6 +58,10 @@ button {
     padding: 10px;
 }
 
+#button_dark {
+    display: none;
+}
+
 
 button:hover {
     background-color: #303440;
@@ -93,8 +97,6 @@ button:hover {
     width: 310px;
     height: 65px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #fafafa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.4rem;
@@ -274,7 +276,20 @@ button:hover {
     background-color: transparent;
 }
 
+.txt_stroke_none {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: inherit;
+}
 
+.txt_stroke_light {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(225, 230, 230);
+}
+
+.txt_stroke_dark {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
 
 
 
@@ -288,13 +303,14 @@ button:hover {
         font-size: 2rem;
     }
 
+    /* TEXTO DE MEME */
     .text_box {
         width: 450px;
         height: 80px;
         font-size: 1.7rem;
     }
 
-
+    /* CONTAINER DE IMG DE MEME */
     .img_medium {
         width: 450px;
         height: 380px;
@@ -306,64 +322,36 @@ button:hover {
 
 
 @media (min-width: 1024px) {
-
-    /* .right_side_box_img {
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 1;
-    }
-
-    #tab_img , #tab_text{
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-    } */
-
-    /* .right_side_container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 10;
-        text-align: right;
-        padding-left: 10px;
-        max-width: 500px;
-        display: flex;
-        background-color: #252934;
-        color: #fafafa;
-    }*/
-
+    /* TITULO IMAGEN Y TEXTO */
     .text_legend {
         padding-top: 40px;
     }
-
+    /* SECCION IMAGEN */
     #tab_img {
-        width: 13%;
+        width: 23%;
         display: flex;
     }
-
-    /* #tab_text {
-
-    } */
-
-    /* #tab_text:target #button_text {
-        display: block;
-        width: 20%;
-        background-color: #252934;
-        display: flex;
-    } */
-
-    /* .button_close{
-        display: none;
-    } */
 
     .right_side_box_img {
         padding: 25px;
     }
 
+    /* SECCION TEXTO */
     .right_side_box_txt {
         padding: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* SECCION IMAGEN */
+    #tab_img {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* SECCION IMAGEN */
+    #tab_img {
+        width: 17%;
     }
 }

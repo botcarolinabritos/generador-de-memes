@@ -1,6 +1,5 @@
                 // PANELES OCULTOS //
 
-
 const tabImg = document.querySelector("#tab_img");
 const tabText = document.querySelector("#tab_text");
 tabImg.classList.add("hidden");
@@ -19,7 +18,6 @@ botonTexto.addEventListener("click", function(){
 
 
             // BOTON CERRAR //
-
 
 const botonCerrarImg = document.getElementById("button_close_img");
 botonCerrarImg.addEventListener("click", function(){
@@ -42,20 +40,53 @@ botonCerrarTxt.addEventListener("click", function(){
 
 
             // MODO CLARO , MODO OSCURO 
-            // nota: el error que ocurre, es que al hacer click en el botón Modo claro, no efectúa el cambio de texto a "Modo oscuro" inmediatamente, hay que clickear dos veces para que aparezca, y una vez que lo hace no vuelve a su valor default, queda aplicado el texto "Modo oscuro".
-            //
+            // nota: el error que ocurría, es que al hacer click en el botón Modo claro, se efectuaba el cambio de texto a "Modo oscuro" pero no volvía su valor default, quedaba aplicado el texto "Modo oscuro".
+            // Se solucionó añadiendo otro botón desde HTML, display none en CSS, y en JS se hizo un evento para que al clickear, el botón Modo Claro se oculte y en su lugar aparezca Modo Oscuro.
+            // 
 
 const botonModoClaro = document.querySelector("#button_light_dark");
+const botonModoOscuro = document.querySelector("#button_dark");
 
 botonModoClaro.addEventListener("click", function() {
-        botonModoClaro.innerHTML = `<img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FFFFFF/external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah.png" alt="external-idea-bulb-coding-tanah-basah-basic-outline-tanah-basah" /> Modo oscuro`;
-});
+    botonModoClaro.style.display = "none";
+    botonModoOscuro.style.display = "flex";
+    
+})
+
+botonModoOscuro.addEventListener("click", function() {
+    botonModoOscuro.style.display = "none";
+    botonModoClaro.style.display = "flex";
+})
 
 botonModoClaro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
     botonImagen.classList.toggle("header_background_light");
     botonTexto.classList.toggle("header_background_light");
     botonModoClaro.classList.toggle("header_background_light");
+    botonModoOscuro.classList.toggle("header_background_light");
+    tabImg.classList.toggle("header_background_light");
+    tabText.classList.toggle("header_background_light");
+    restablecerFiltros.classList.toggle("header_background_light");
+    document.querySelector(".container_meme_box").classList.toggle("main_background_light");
+    document.querySelector(".right_side_box_img").classList.toggle("header_background_light");
+    document.querySelector(".right_side_box_txt").classList.toggle("header_background_light");
+    
+    [...document.getElementsByTagName("label")].forEach((element) => {
+        element.classList.toggle("header_background_light");
+    });
+
+    [...document.getElementsByTagName("select")].forEach((element) => {
+        element.classList.toggle("header_background_light");
+    });
+
+});
+
+botonModoOscuro.addEventListener("click", function(){
+    document.querySelector(".box_all_container").classList.toggle("header_background_light");
+    botonImagen.classList.toggle("header_background_light");
+    botonTexto.classList.toggle("header_background_light");
+    botonModoClaro.classList.toggle("header_background_light");
+    botonModoOscuro.classList.toggle("header_background_light");
     tabImg.classList.toggle("header_background_light");
     tabText.classList.toggle("header_background_light");
     restablecerFiltros.classList.toggle("header_background_light");
@@ -76,7 +107,6 @@ botonModoClaro.addEventListener("click", function(){
 
             // BOTON DESCARGA MEME//
 
-
 const botonDescarga = document.getElementById("btn_download");
 const contenedorDescarga = document.getElementById("box_meme");
 
@@ -94,7 +124,6 @@ botonDescarga.addEventListener("click", descargarMeme);
 
             // URL //
 
-
 const campoUrl = document.getElementById("link_input");
 const miMeme = document.getElementById("img_meme");
 
@@ -110,16 +139,9 @@ campoUrl.addEventListener("change", function() {
 const colorFondoImg = document.getElementById("bground_color_meme");
 const backgroundMeme = document.getElementById("box_meme_bground");
 
-// colorFondoTxt.addEventListener("input", (e) => {
-//     backgroundMeme.style.backgroundColor = e.target.value;
-// });
-            
 colorFondoImg.addEventListener("input", (e) => {
     if (backgroundMeme != null) {
         backgroundMeme.style.background = e.target.value;
-    }
-    else {
-        backgroundMeme.style.backgroundColor = "black";
     }
 });
 
@@ -169,7 +191,6 @@ sliderInver.addEventListener("input", actualizarFiltros);
 
             // RESTABLECER FILTROS //
 
-
 const restablecerFiltros = document.getElementById("restore_btn");
 
 restablecerFiltros.addEventListener("click", function() {
@@ -196,7 +217,6 @@ restablecerFiltros.addEventListener("click", function() {
 
             // CAMBIAR TEXTO SUPERIOR E INFERIOR //
 
-
 const campoSup = document.getElementById("add_text_sup");
 const campoInf = document.getElementById("add_text_inf");
 
@@ -211,7 +231,6 @@ campoInf.addEventListener("change", function() {
 
 
            // OCULTAR TEXTO SUPERIOR E INFERIOR //
-
 
 const supText = document.querySelector(".top_txt");
 const infText = document.querySelector(".bottom_txt");
@@ -256,19 +275,24 @@ const alignCenter = document.getElementById("btn_align_center");
 const alignRight = document.getElementById("btn_align_right");
 
 alignLeft.addEventListener("click", function() {
-    console.log(alignLeft);
     supText.style.justifyContent = "left";
+    supText.style.alignItems = "center";
     infText.style.justifyContent = "left";
+    infText.style.alignItems = "center";
 })
 
 alignCenter.addEventListener("click", function() {
     supText.style.justifyContent = "center";
+    supText.style.alignItems = "center";
     infText.style.justifyContent = 'center';
+    infText.style.alignItems = "center";
 })
 
 alignRight.addEventListener("click", function() {
     supText.style.justifyContent = "right";
+    supText.style.alignItems = "center";
     infText.style.justifyContent = "right";
+    infText.style.alignItems = "center";
 })
 
             // COLOR DE FUENTE //
@@ -301,6 +325,39 @@ checkTransparente.addEventListener("click", function() {
 
 checkTransparente.addEventListener("click", function() {
     infText.classList.toggle("background_transparent");
+})
+
+           // CONTORNO //
+
+const txtContornoNinguno = document.getElementById("text_stroke_none");
+const txtContornoClaro = document.getElementById("text_stroke_light");
+const txtContornoOscuro = document.getElementById("text_stroke_dark");
+
+txtContornoNinguno.addEventListener("click", function() {
+    supText.classList.remove("txt_stroke_light");
+    infText.classList.remove("txt_stroke_light");
+    supText.classList.remove("txt_stroke_dark");
+    infText.classList.remove("txt_stroke_dark");
+})
+txtContornoClaro.addEventListener("click", function() {
+    supText.classList.add("txt_stroke_light");
+    infText.classList.add("txt_stroke_light")
+})
+txtContornoOscuro.addEventListener("click", function() {
+    supText.classList.add("txt_stroke_dark");
+    infText.classList.add("txt_stroke_dark")
+})
+
+
+
+            // ESPACIADO //
+
+const txtSpacing = document.getElementById("text_spacing");
+
+txtSpacing.addEventListener("input", function() {
+    let textSpacing = this.value;
+    supText.style.padding = textSpacing + "px";
+    infText.style.padding = textSpacing + "px";
 })
 
 
