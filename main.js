@@ -14,7 +14,7 @@ botonImagen.addEventListener("click", function(){
 const botonTexto = document.querySelector("#button_text");
 botonTexto.addEventListener("click", function(){
     tabText.classList.toggle("hidden");
-})
+});
 
 
             // BOTON CERRAR //
@@ -28,7 +28,6 @@ botonCerrarImg.addEventListener("click", function(){
         .toggle("hidden");
 });
 
-
 const botonCerrarTxt = document.getElementById("button_close_txt");
 botonCerrarTxt.addEventListener("click", function(){
     botonCerrarTxt
@@ -40,9 +39,8 @@ botonCerrarTxt.addEventListener("click", function(){
 
 
             // MODO CLARO , MODO OSCURO 
-            // nota: el error que ocurría, es que al hacer click en el botón Modo claro, se efectuaba el cambio de texto a "Modo oscuro" pero no volvía su valor default, quedaba aplicado el texto "Modo oscuro".
+            // nota: el error que ocurría, es que al hacer click en el botón Modo claro, se efectuaba el cambio de texto a "Modo oscuro" pero no devolvía su valor default, quedaba aplicado el texto "Modo oscuro".
             // Se solucionó añadiendo otro botón desde HTML, display none en CSS, y en JS se hizo un evento para que al clickear, el botón Modo Claro se oculte y en su lugar aparezca Modo Oscuro.
-            // 
 
 const botonModoClaro = document.querySelector("#button_light_dark");
 const botonModoOscuro = document.querySelector("#button_dark");
@@ -51,12 +49,12 @@ botonModoClaro.addEventListener("click", function() {
     botonModoClaro.style.display = "none";
     botonModoOscuro.style.display = "flex";
     
-})
+});
 
 botonModoOscuro.addEventListener("click", function() {
     botonModoOscuro.style.display = "none";
     botonModoClaro.style.display = "flex";
-})
+});
 
 botonModoClaro.addEventListener("click", function(){
     document.querySelector(".box_all_container").classList.toggle("header_background_light");
@@ -70,6 +68,8 @@ botonModoClaro.addEventListener("click", function(){
     document.querySelector(".container_meme_box").classList.toggle("main_background_light");
     document.querySelector(".right_side_box_img").classList.toggle("header_background_light");
     document.querySelector(".right_side_box_txt").classList.toggle("header_background_light");
+
+    //utilicé arrays ya que no pude cambiar el background-color de estas tags aplicando estilo directo sobre select y option.
     
     [...document.getElementsByTagName("label")].forEach((element) => {
         element.classList.toggle("header_background_light");
@@ -93,7 +93,9 @@ botonModoOscuro.addEventListener("click", function(){
     document.querySelector(".container_meme_box").classList.toggle("main_background_light");
     document.querySelector(".right_side_box_img").classList.toggle("header_background_light");
     document.querySelector(".right_side_box_txt").classList.toggle("header_background_light");
-    
+
+    //utilicé arrays ya que no pude cambiar el background-color de estas tags aplicando estilo directo sobre select y option.
+
     [...document.getElementsByTagName("label")].forEach((element) => {
         element.classList.toggle("header_background_light");
     });
@@ -114,7 +116,7 @@ function descargarMeme () {
     domtoimage.toBlob(contenedorDescarga).then(function (blob) {
         saveAs(blob, 'meme.png');
     })
-}
+};
 
 botonDescarga.addEventListener("click", descargarMeme);
 
@@ -132,7 +134,6 @@ campoUrl.addEventListener("change", function() {
     miMeme.setAttribute("alt", "image.png");
 }
 );
-
 
             // FONDO DE COLOR IMG //
 
@@ -174,7 +175,7 @@ function actualizarFiltros() {
         miMeme.style.filter = filtros;
         miMeme.style.opacity = sliderOpac.value;
     }
-}
+};
 
 sliderOpac.addEventListener("input", actualizarFiltros);
 sliderBril.addEventListener("input", actualizarFiltros);
@@ -208,7 +209,7 @@ restablecerFiltros.addEventListener("click", function() {
     sliderInver.value = 0;
 
     restablecerFiltros();
-})
+});
 
 
 
@@ -229,7 +230,6 @@ campoInf.addEventListener("change", function() {
 });
 
 
-
            // OCULTAR TEXTO SUPERIOR E INFERIOR //
 
 const supText = document.querySelector(".top_txt");
@@ -246,15 +246,15 @@ checkInf.addEventListener("click", function() {
 });
 
 
-
-            // ESTILO DE FUENTE //
+            // ESTILO DE FUENTE 
+            //nota: Comic Sans MS no se aplica en formato mobile.
 
 const fontOptions = document.getElementById("font_options");
 
 fontOptions.addEventListener("change" , (e) => {
     supText.style.fontFamily = e.target.value;
     infText.style.fontFamily = e.target.value;
-})
+});
 
 
             // TAMAÑO DE FUENTE 
@@ -265,7 +265,7 @@ sizeTxt.addEventListener("input", function(e) {
     let fontSize = this.value;
     supText.style.fontSize = fontSize + "px";
     infText.style.fontSize = fontSize + "px";
-})
+});
 
 
             // ALINEACION DE TEXTO 
@@ -279,21 +279,21 @@ alignLeft.addEventListener("click", function() {
     supText.style.alignItems = "center";
     infText.style.justifyContent = "left";
     infText.style.alignItems = "center";
-})
+});
 
 alignCenter.addEventListener("click", function() {
     supText.style.justifyContent = "center";
     supText.style.alignItems = "center";
     infText.style.justifyContent = 'center';
     infText.style.alignItems = "center";
-})
+});
 
 alignRight.addEventListener("click", function() {
     supText.style.justifyContent = "right";
     supText.style.alignItems = "center";
     infText.style.justifyContent = "right";
     infText.style.alignItems = "center";
-})
+});
 
             // COLOR DE FUENTE //
 
@@ -315,17 +315,17 @@ colorFondoTxt.addEventListener("input", (e) => {
 });
 
             // FONDO TEXTO TRANSPARENTE
-            //nota: una vez que se selecciona un color de fondo, no se aplica el fondo transparente.
+            //nota: una vez que se selecciona un color de fondo de texto, no se aplica el fondo transparente.
 
 const checkTransparente = document.getElementById("check_transparent");
 
 checkTransparente.addEventListener("click", function() {
     supText.classList.toggle("background_transparent");
-})
+});
 
 checkTransparente.addEventListener("click", function() {
     infText.classList.toggle("background_transparent");
-})
+});
 
            // CONTORNO //
 
@@ -338,15 +338,15 @@ txtContornoNinguno.addEventListener("click", function() {
     infText.classList.remove("txt_stroke_light");
     supText.classList.remove("txt_stroke_dark");
     infText.classList.remove("txt_stroke_dark");
-})
+});
 txtContornoClaro.addEventListener("click", function() {
     supText.classList.add("txt_stroke_light");
     infText.classList.add("txt_stroke_light")
-})
+});
 txtContornoOscuro.addEventListener("click", function() {
     supText.classList.add("txt_stroke_dark");
     infText.classList.add("txt_stroke_dark")
-})
+});
 
 
 
